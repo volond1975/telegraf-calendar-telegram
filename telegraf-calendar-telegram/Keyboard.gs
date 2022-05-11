@@ -1,3 +1,4 @@
+/*
 const availableOptions = [
     'resize_keyboard',
     'force_reply',
@@ -295,3 +296,4 @@ class Keyboard {
 }
 
 var keyboard = Keyboard
+*/

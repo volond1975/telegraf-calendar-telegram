@@ -1,7 +1,60 @@
 {
-  "timeZone": "America/New_York",
+  "timeZone": "Europe/Kiev",
   "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Gmail",
+        "version": "v1",
+        "serviceId": "gmail"
+      },
+      {
+        "userSymbol": "Drive",
+        "version": "v2",
+        "serviceId": "drive"
+      }
+    ],
+    "libraries": [
+      {
+        "userSymbol": "lumpia",
+        "version": "10",
+        "libraryId": "1Yo6vQRwjG5Gl9jeEF0g2tBTUa0XN5MyT4G_HeDpRr9DvabxhRcSdhPNj"
+      },
+      {
+        "userSymbol": "WizardDua",
+        "version": "1",
+        "libraryId": "1qh5YcQ6JIQcBj97jouAzZmjuuZnTybJVXvyKNs07SobcTPxu-sIXU87R"
+      },
+      {
+        "userSymbol": "Builder",
+        "version": "2",
+        "libraryId": "1CdmLLLtBE1wZ2oxdwYPYMdPIXZLVtdqGEm7k-01JTuAW3Q1-v3DFto-I"
+      },
+      {
+        "userSymbol": "ms",
+        "version": "3",
+        "libraryId": "1yQQu8tq6UxC-oSacu0Y3lUrAoyR1feT151I7sHq6U8yCRDlJN2tYXidU"
+      },
+      {
+        "userSymbol": "Cheerio",
+        "version": "14",
+        "libraryId": "1ReeQ6WO8kKNxoaA_O0XEQ589cIrRvEBA9qcWpNqdOP17i47u6N9M5Xh0"
+      },
+      {
+        "userSymbol": "DAYJS",
+        "version": "1",
+        "libraryId": "1DHxNb7lKgyeimcrwoaVZ-CqS3D0htrsykGsyB04uC-LpKXX7oF5P4_nL"
+      },
+      {
+        "userSymbol": "Gexpress",
+        "version": "36",
+        "libraryId": "1Lm_jNmD2FWYF-Kgj7AdHVvLEVXZ4c5AXwzd1KJSb48scn0HLBq64um7S"
+      }
+    ]
   },
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "webapp": {
+    "executeAs": "USER_DEPLOYING",
+    "access": "ANYONE_ANONYMOUS"
+  }
 }

@@ -28,8 +28,8 @@ class Calendar {
         this.bot.action(/calendar-telegram-date-[\d-]+/g, context => {
             if (onDateSelected) {
                 let date = context.match[0].replace("calendar-telegram-date-", "");
-                return context.answerCbQuery()
-                    .then(() => onDateSelected(context, date));
+               //FIXME: return context.answerCbQuery().then(() => onDateSelected(context, date));
+              return    this.bot.telegram.answerCallbackQuery(context.callbackQuery.id).then(() => onDateSelected(context, date));
             }
         });
 
@@ -52,8 +52,10 @@ class Calendar {
             return context.answerCbQuery()
                 .then(() => context.editMessageText(prevText, this.helper.getCalendarMarkup(date)));
         });
-
-        this.bot.action(/calendar-telegram-ignore-[\d\w-]+/g, context => context.answerCbQuery());
+       //FIXME:bot.tg.answerCallbackQuery(ctx.chat.id,msg)
+       // this.bot.action(/calendar-telegram-ignore-[\d\w-]+/g, context => context.answerCbQuery());
+       this.bot.action(/calendar-telegram-ignore-[\d\w-]+/g, context =>this.bot.telegram.answerCallbackQuery(context.callbackQuery.id));
+       
     }
 
     /**

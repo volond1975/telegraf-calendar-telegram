@@ -5,7 +5,7 @@
     jika rumit, gak usah dipakai
     gunakan metode jadul saja
 */
-
+/*
 class Markup {
     forceReply(value = true) {
         this.force_reply = value
@@ -375,7 +375,7 @@ class Extra {
 
 var markup = Markup;
 var extra = Extra;
-
+*/
 // --
 
 /* let kb = new Markup().inlineKeyboard( [
