@@ -89,8 +89,14 @@ function setWebHook() {
 bot.start((ctx) => {
    let msg=`Ваш ID: <b>${ctx.chat.id}</b>`
   // filterUser(ctx)
-   return bot.tg.answerCallbackQuery(ctx.chat.id,msg)
+  var kb=Keyboard.make(["a","b"]).inline()
+   return ctx.reply("Hi",kb)
 })
+/*
+bot.on('callback_query', ctx => {
+  ctx.answerCallbackQuery("test",false)
+})
+*/
  function getMe(){
 console.log(bot.telegram.getMe())
 //var tg=bot.telegram
