@@ -106,7 +106,7 @@ class CalendarHelper {
         this.addDays(page, m, date);
         return page;
     }
-
+      
     normalizeWeekDay(weekDay) {
         let result = weekDay - this.options.startWeekDay;
         if (result < 0) result += 7;
@@ -161,6 +161,7 @@ class CalendarHelper {
     }
 
     /**
+     * 
      * Check if inupt date is in same year and month as min date
      */
     isInMinMonth(date) {
@@ -168,6 +169,7 @@ class CalendarHelper {
     }
 
     /**
+     * 
      * Check if inupt date is in same year and month as max date
      */
     isInMaxMonth(date) {
@@ -175,6 +177,7 @@ class CalendarHelper {
     }
 
     /**
+     * 
      * Check if myDate is in same year and month as testDate
      * 
      * @param {*Date} myDate input date
@@ -191,6 +194,7 @@ class CalendarHelper {
     }
 
     /**
+     * 
      * This uses unicode to draw strikethrough on text
      * @param {*String} text text to modify
      */
@@ -201,6 +205,7 @@ class CalendarHelper {
     }
 
     /**
+     * 
      * Builds an array of seven ignored callback buttons
      * @param {*object} m Telegraf Markup object
      * @param {*String} prefix String to be added before the element index

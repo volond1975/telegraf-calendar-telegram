@@ -30,7 +30,7 @@ class Calendar {
                 let date = context.match[0].replace("calendar-telegram-date-", "");
             //   //FIXME: 
            // return context.answerCallbackQuery().then(() => onDateSelected(context, date));
-           onDateSelected(context, date)
+             onDateSelected(context, date)
            return context.answerCallbackQuery() 
             }
         });

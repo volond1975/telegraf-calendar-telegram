@@ -34,7 +34,7 @@ const monthFormat_ru = 'января_февраля_марта_апреля_ма
 const monthStandalone_ru = 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split('_')
 const monthShortFormat_ru = 'янв._февр._мар._апр._мая_июня_июля_авг._сент._окт._нояб._дек.'.split('_')
 const monthShortStandalone_ru = 'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split('_')
-const weekDayNames_ru=["L", "M", "M", "G", "V", "S", "D"]
+const weekDayNames_ru=["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
 const weekDayNames_en="mondays_tuesdays_wednesdays_thursdays_fridays_saturdays_sundays".split('_')
 //const Calendar = require('../');
 var dayjs=DAYJS.dayjs()
@@ -48,11 +48,8 @@ bot.options.log_id = '192818801'
 // instantiate the calendar
 const calendar = new Calendar(bot, {
     startWeekDay: 1,
-    weekDayNames: ["L", "M", "M", "G", "V", "S", "D"],
-    monthNames: [
-        "Gen", "Feb", "Mar", "Apr", "Mag", "Giu",
-        "Lug", "Ago", "Set", "Ott", "Nov", "Dic"
-    ]
+    weekDayNames: weekDayNames_ru,
+    monthNames: monthShortStandalone_ru
 });
 var test=()=>{
   console.log(monthNames)
@@ -68,6 +65,7 @@ bot.tg.sendMessage(adminbot, "Here you are",calendar.setMinDate(minDate).setMaxD
 }
 // listen for the selected date event
 calendar.setDateListener((context, date) => context.reply(date));
+
 // retreive the calendar HTML
 bot.command("calendar", context => {
 
@@ -86,6 +84,7 @@ function setWebHook() {
   let result = bot.telegram.setWebhook(url);
    Logger.log(result);
 }
+
 bot.start((ctx) => {
    let msg=`Ваш ID: <b>${ctx.chat.id}</b>`
   // filterUser(ctx)
@@ -99,24 +98,5 @@ bot.on('callback_query', ctx => {
 */
  function getMe(){
 console.log(bot.telegram.getMe())
-//var tg=bot.telegram
-//var res=tg.sendDice(192818801)
-//console.log(res)
-/*
-{ ok: true,
-  result: 
-   { id: 2055541519,
-     is_bot: true,
-     first_name: 'TDSheet',
-     username: 'tdsheet_bot',
-     can_join_groups: true,
-     can_read_all_group_messages: false,
-     supports_inline_queries: false
-      }
-      }
-
-
-*/
 }
 
-//bot.startPolling();
